@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bez-oV-Uyu" userLabel="Record">
+                                <rect key="frame" x="129.5" y="375.5" width="155" height="155"/>
+                                <state key="normal" image="Record"/>
+                                <connections>
+                                    <action selector="Touch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YDW-af-qFG"/>
+                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7nK-Xr-zpg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQP-3d-VI8">
+                                <rect key="frame" x="187" y="740" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Photo"/>
+                                <connections>
+                                    <action selector="Photo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MPF-VZ-ApQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6h-4Z-7hK">
+                                <rect key="frame" x="180" y="538.5" width="54.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.25" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9e7-vw-3nc">
+                                <rect key="frame" x="182" y="702" width="50" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Camera" image="Camera"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TzK-5E-vY2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="erJ-3q-Eni" userLabel="Stop Recording">
+                                <rect key="frame" x="186" y="567" width="42" height="42"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42.000000000000057" id="gnW-8U-G0A"/>
+                                    <constraint firstAttribute="width" constant="42" id="ygA-6T-6AQ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Stop"/>
+                                <connections>
+                                    <action selector="StopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBz-8f-0ce"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="erJ-3q-Eni" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="G1X-e1-5uw"/>
+                            <constraint firstItem="g6h-4Z-7hK" firstAttribute="centerX" secondItem="bez-oV-Uyu" secondAttribute="centerX" id="JLf-Ea-X0i"/>
+                            <constraint firstItem="erJ-3q-Eni" firstAttribute="top" secondItem="g6h-4Z-7hK" secondAttribute="bottom" constant="8" id="SgE-kO-3eH"/>
+                            <constraint firstItem="bez-oV-Uyu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="VoW-mY-u5v"/>
+                            <constraint firstItem="g6h-4Z-7hK" firstAttribute="top" secondItem="bez-oV-Uyu" secondAttribute="bottom" constant="8" id="ie7-2z-80f"/>
+                            <constraint firstItem="bez-oV-Uyu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qbN-5Y-3Xg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="RecordButton" destination="bez-oV-Uyu" id="6ZU-up-2mX"/>
+                        <outlet property="RecordingLabel" destination="g6h-4Z-7hK" id="kTD-Pi-94R"/>
+                        <outlet property="StopRecordButton" destination="erJ-3q-Eni" id="Y4s-rG-t9J"/>
+                        <outlet property="imagePicker" destination="lQP-3d-VI8" id="yxY-tk-qre"/>
+                        <outlet property="takePhoto" destination="9e7-vw-3nc" id="P0C-Z1-hhx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="102.45535714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Camera" width="256" height="256"/>
+        <image name="Record" width="155" height="155"/>
+        <image name="Stop" width="155" height="155"/>
+    </resources>
+</document>
